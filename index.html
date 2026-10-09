@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>漫才の構造</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="title-area">
+        <h1>
+            漫才の構造 
+        </h1>
+        <h2>
+         〜データで紐解く笑いのメカニズム〜   
+        </h2>
+        </div>
+
+        <nav>
+            <a href="index.html">ホーム</a>
+            <a href="souseiki.html">創成期</a>
+            <a href="kakumeiki.html">革命期</a>
+            <a href="henkakuki.html">変革期</a>
+            <a href="gendaiki.html">現代期</a>
+            <a href="kekka.html">研究結果</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>漫才の構造とは？</h2>
+
+            <p>
+                漫才の構造を「可視化」して理解することで、<br>
+                最強のボケ数や間隔を抽出し<br>
+                笑いのメカニズムや会話の流れを分析する<br>
+                漫才に特化したサイト。<br>
+            </p>
+
+        </div>
+    </section>
+
+    <main>
+        <section class="card">
+            <h2>概要</h2>
+
+            <p>
+                ”漫才”を感覚で語られてきた笑いのテクニックを<br>
+                データとして見える形にすることで、<br>
+                漫才を好きな人にも詳しくない人にも理解してもらう。<br>
+            </p>
+
+            <p>
+                ネタ時間は4〜5分とする<br>
+                審査方法：ネタ秒数、ボケ数、ボケ間隔、ツッコミ数、ツッコミ間隔 で判断<br>
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>漫才とは</h2>
+
+            <p>
+                主に二人の芸人がマイクの前で滑稽な会話を行い、<br>
+                観客を笑わせる日本の伝統的な演芸。<br>
+            </p>
+
+            <p>
+                平安時代に成立した伝統芸能「萬歳」が<br>
+                江戸時代から昭和時代にかけて<br>
+                大阪・京都を中心とする「上方」において独自に発展した<br>
+
+            </p>
+        </section>
+
+        <section class="card">
+            <img src="種類.jpg" alt="漫才用語・種類" class="zoom-image">
+            <h2>漫才用語・種類</h2>
+
+            <p>
+                漫才を構成する重要な技法や種類を紹介。
+            </p>
+        </section>
+
+        <section class="card">
+            <img src="年表.jpg" alt="年表" class="zoom-image">                                                                                                                                                                                                                                          
+            <h2>第◯世代</h2>
+
+            <p>                                                                                                                                         
+                当サイトでは独自の時代分けをしているが、
+                一般的に有名な時代ごとの特徴や漫才師を紹介。
+            </p>
+        </section>
+
+        <div id="overlay" onclick="closeImage()">
+        <img id="largeImage">
+        </div>
+
+        <script>
+        function openImage(src){
+        document.getElementById("largeImage").src = src;
+        document.getElementById("overlay").style.display = "flex";
+        }
+
+        function closeImage(){
+         document.getElementById("overlay").style.display = "none";
+        }
+        </script>
+
+    </main>
+    <footer>
+        <p>漫才の構造</p>
+    </footer>
+
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img id="modal-img">
+    </div>
+
+    <script>
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const closeBtn = document.querySelector(".close");
+const images = document.querySelectorAll(".zoom-image");
+
+images.forEach(image => {
+    image.addEventListener("click", () => {
+        modal.style.display = "flex";
+        modalImg.src = image.src;
+    });
+});
+
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+});
+</script>
+</body>
+</html>

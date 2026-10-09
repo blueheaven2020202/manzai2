@@ -1,0 +1,522 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background-color:#0a0a0a;
+    color:white;
+    font-family:"Hiragino Sans", sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    min-height: 120px; /* 好きな高さに調整 */
+    background-color: #111;
+}
+
+.title-area{
+    display: flex;
+    align-items: center;
+    gap: 15px;         /* タイトル同士の距離 */
+    margin-right: 80px; /* ナビとの距離 */
+}
+
+.zoom-image {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.zoom-image:hover {
+    opacity: 0.8;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    opacity: 0.7;
+}
+
+header h1{
+    color:#d4af37;
+    font-size:40px;
+}
+
+header h2{
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: normal;
+    color: #d4af37;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#d4af37;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+/* 漫才師カルーセル */
+.manzai-carousel {
+    padding: 55px 16px 45px;
+    text-align: center;
+    background: #191919;
+    color: #fff;
+    overflow: hidden;
+}
+
+.carousel-label {
+    color: #e7b86b;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.manzai-carousel > h2 {
+    margin: 10px 0;
+    font-size: clamp(24px, 4vw, 36px);
+}
+
+.carousel-description,
+.carousel-hint {
+    color: #c7c7c7;
+    font-size: 14px;
+}
+
+.carousel-stage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    max-width: 900px;
+    margin: 30px auto 15px;
+}
+
+.carousel-track {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr)
+                           minmax(0, 2fr)
+                           minmax(0, 1fr);
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    min-width: 0;
+}
+
+.carousel-card {
+    min-width: 0;
+    min-height: 155px;
+    padding: 18px 12px;
+    border: 1px solid #555;
+    border-radius: 14px;
+    background: #292929;
+    color: #fff;
+    cursor: pointer;
+    overflow-wrap: anywhere;
+    transition: transform .4s ease,
+                opacity .4s ease,
+                background .4s ease;
+}
+
+.carousel-card h3 {
+    font-size: clamp(12px, 2vw, 19px);
+    line-height: 1.6;
+}
+
+.carousel-card p {
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.carousel-card.is-side {
+    opacity: .55;
+    transform: scale(.86);
+}
+
+.carousel-card.is-center {
+    border: 2px solid #e7b86b;
+    background: #35302a;
+    transform: scale(1);
+    box-shadow: 0 8px 30px #0005;
+}
+
+.carousel-card.is-center .card-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 9px 16px;
+    border-radius: 6px;
+    background: #e7b86b;
+    color: #191919;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.carousel-arrow {
+    flex-shrink: 0;
+    width: 38px;
+    height: 45px;
+    border: 1px solid #777;
+    border-radius: 8px;
+    background: #292929;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.carousel-arrow:hover {
+    background: #e7b86b;
+    color: #191919;
+}
+
+.carousel-counter {
+    color: #e7b86b;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.carousel-card:focus-visible,
+.carousel-arrow:focus-visible {
+    outline: 3px solid #e7b86b;
+    outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+    .manzai-carousel {
+        padding: 38px 8px;
+    }
+
+    .carousel-stage {
+        gap: 5px;
+    }
+
+    .carousel-track {
+        gap: 5px;
+    }
+
+    .carousel-card {
+        min-height: 145px;
+        padding: 12px 5px;
+    }
+
+    .carousel-card.is-side {
+        transform: scale(.92);
+    }
+
+    .carousel-arrow {
+        width: 28px;
+        height: 40px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carousel-card {
+        transition: none;
+    }
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 9999;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-img {
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+
+    animation: popup 0.25s ease;
+}
+
+@keyframes popup {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.hero{
+    height:500px;
+
+    display:flex;
+    align-items:center;
+
+    padding-left:80px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.6),
+        rgba(0,0,0,.6)
+    ),
+    url("https://images.unsplash.com/photo-1507676184212-d03ab07a01bf");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h2{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    width:500px;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+button{
+    background:#e60012;
+    color:white;
+
+    border:none;
+
+    padding:15px 35px;
+
+    font-size:16px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+}
+
+main{
+    width:90%;
+    max-width:1200px;
+
+    margin:50px auto;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.card{
+    background:#111;
+
+    padding:30px;
+
+    border:1px solid #222;
+
+    border-radius:10px;
+
+    transition:.3s;
+}
+
+.timeline{
+    white-space: pre-wrap;
+    line-height: 1.8;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#d4af37;
+}
+
+.timeline-box {
+    background: #000;
+    color: white;
+    border: 3px solid #ffd700;
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    margin: 30px auto;
+}
+
+.timeline-box h2 {
+    color: #ffd700;
+    font-size: 32px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+p{
+    margin: 10px;
+}
+
+th {
+    color: #ffd700;
+    border-bottom: 2px solid #ffd700;
+    padding: 12px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #555;
+}
+
+.boke {
+    color: #ff6666;
+}
+
+.tsukkomi {
+    color: #66ccff;
+}
+
+.intro {
+    color: #99ff66;
+}
+
+.card h2{
+    color:#d4af37;
+
+    margin-bottom:15px;
+}
+
+.card h4 {
+    margin-bottom: 15px;
+}
+
+img{
+  cursor:pointer;
+}
+
+#overlay{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.8);
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+
+#overlay img{
+  max-width:90%;
+  max-height:90%;
+  border-radius:10px;
+}
+
+.card p{
+    line-height:1.8;
+}
+
+
+
+footer{
+    text-align:center;
+
+    padding:40px;
+
+    border-top:1px solid #333;
+
+    color:#888;
+}
+
+.graph{
+    display:flex;
+    align-items:flex-end;
+    gap:20px;
+    height:250px;
+    border-left:2px solid #ffd700;
+    border-bottom:2px solid #ffd700;
+    padding:20px;
+    margin-bottom:50px;
+}
+
+.item{
+    text-align:center;
+}
+
+.bar{
+    width:60px;
+    background:#ffd700;
+    color:#000;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    font-weight:bold;
+}
+
+.item p{
+    color:white;
+    margin-top:10px;
+}
+
+.carousel-back {
+    display: block;
+    margin: 20px auto 0;
+    padding: 12px 22px;
+    border: 1px solid #e7b86b;
+    border-radius: 8px;
+    background: transparent;
+    color: #e7b86b;
+    cursor: pointer;
+}
+
+.carousel-back[hidden] {
+    display: none;
+}
+
+main .card[hidden] {
+    display: none !important;
+}

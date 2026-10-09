@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>漫才の構造</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="title-area">
+        <h1>
+            漫才の構造
+        </h1>
+        <h2>
+         〜データで紐解く笑いのメカニズム〜   
+        </h2>
+        </div>
+
+        <nav>
+            <a href="index.html">ホーム</a>
+            <a href="souseiki.html">創成期</a>
+            <a href="kakumeiki.html">革命期</a>
+            <a href="henkakuki.html">変革期</a>
+            <a href="gendaiki.html">現代期</a>
+            <a href="kekka.html">研究結果</a>
+        </nav>
+    </header>
+
+     <section class="hero">
+        <div class="hero-text">
+            <h2>創成期</h2>
+
+            <p>
+               1970~80年ごろから活躍している
+               漫才師のネタの構造を分析する。
+            </p>
+
+            <p>
+               1980~1982年 漫才ブームが起き、ツービートを筆頭とする<br>
+               漫才コンビがアイドルのような人気を獲得。<br>
+               伝説的番組の「オレたちひょうきん族」や「笑っていいとも!」が放送され<br>
+               ビートたけし、明石家さんま、タモリのお笑いBIG3が知名度を広げていった。<br>
+            </p>
+        </div>
+    </section>
+
+    <section class="manzai-carousel">
+    <p class="carousel-label">MANZAI ARCHIVE</p>
+    <h2>創成期の漫才師</h2>
+    <p class="carousel-description">
+        気になるコンビを選んで、漫才の構造を紐解こう。
+    </p>
+
+    <div class="carousel-stage">
+        <button class="carousel-arrow" id="prevBtn"
+                aria-label="前のコンビ">‹</button>
+
+        <div id="carouselTrack" class="carousel-track"></div>
+
+        <button class="carousel-arrow" id="nextBtn"
+                aria-label="次のコンビ">›</button>
+    </div>
+
+    <p id="carouselCounter" class="carousel-counter"></p>
+    <p class="carousel-hint">中央のコンビを選ぶと分析へ移動</p>
+    <button id="backToCarousel" class="carousel-back" hidden>
+        ← コンビ一覧に戻る
+    </button>
+    </button>
+</section>
+
+
+
+     <main>
+        <section class="card">
+            <h2>ツービート</h2>
+
+            <h4>
+                1972年 結成<br>
+            </h4>
+
+            <h4>
+                ボケ：ビートたけし<br>
+            </h4>
+
+            <h4>
+                ツッコミ：ビートきよし<br>
+            </h4>
+
+            <h4>
+                「ブラックユーモア漫才」で茶の間を席巻<br>
+                ネタ中に下ネタから放送禁止用語・差別用語まで<br>
+                タブー視されていたものをあえて取り入れていった。<br><br>
+            </h4>
+
+            <h4>
+                お笑い界の生きる伝説。<br>
+            </h4>
+
+
+            <h3>「ドラマ・アニメ」</h3> <h4>花王名人劇場にて披露</h4>
+
+            <div class="timeline-box">
+                <table>
+                <tr><td>ネタ秒数 4分21秒</td></tr>
+                <tr><td>ボケ数 24個</td></tr>
+                <tr><td>ボケ間隔 10.9秒</td></tr>
+                <tr><td>ツッコミ数 17個</td></tr>
+                <tr><td>ツッコミ間隔 15.4秒</td></tr>
+                </table>
+
+            <div class="timeline-box">
+                <table>
+                <tr><td>0:00</td><td>スタート</td></tr>
+                <tr><td>0:15</td><td class="boke">ボケ1（つかみ）</td></tr>
+                <tr><td>0:18</td><td class="tsukkomi">ツッコミ1</td></tr>
+                <tr><td>0:19</td><td class="boke">ボケ2</td></tr>
+                <tr><td>0:20</td><td class="tsukkomi">ツッコミ2</td></tr>
+                <tr><td>0:22</td><td class="intro">導入1</td></tr>
+                <tr><td>0:29</td><td class="boke">ボケ3</td></tr>
+                <tr><td>0:37</td><td class="tsukkomi">ツッコミ3</td></tr>
+                <tr><td>0:40</td><td class="boke">ボケ4</td></tr>
+                <tr><td>0:45</td><td class="boke">ボケ5</td></tr>
+                <tr><td>0:51</td><td class="tsukkomi">ツッコミ4</td></tr>
+                <tr><td>0:54</td><td class="boke">ボケ6</td></tr>
+                <tr><td>0:57</td><td class="tsukkomi">ツッコミ5</td></tr>
+                <tr><td>1:02</td><td class="tsukkomi">ツッコミ6</td></tr>
+                <tr><td>1:04</td><td class="boke">ボケ7</td></tr>
+                <tr><td>1:05</td><td class="tsukkomi">ツッコミ7</td></tr>
+                <tr><td>1:13</td><td class="boke">ボケ8</td></tr>
+                <tr><td>1:20</td><td class="tsukkomi">ツッコミ8</td></tr>
+                <tr><td>1:21</td><td class="boke">ボケ9</td></tr>
+                <tr><td>1:23</td><td class="tsukkomi">ツッコミ9</td></tr>
+                <tr><td>1:25</td><td class="boke">ボケ10</td></tr>
+                <tr><td>1:28</td><td class="tsukkomi">ツッコミ10</td></tr>
+                <tr><td>1:30</td><td class="intro">導入２</td></tr>
+                <tr><td>1:35</td><td class="boke">ボケ11</td></tr>
+                <tr><td>1:42 </td><td class="boke">ボケ12</td></tr>
+                <tr><td>1:50</td><td class="boke">ボケ13</td></tr>
+                <tr><td>2:01</td><td class="boke">ボケ14</td></tr>
+                <tr><td>2:11</td><td class="boke">ボケ15</td></tr>
+                <tr><td>2:15</td><td class="tsukkomi">ツッコミ11</td></tr>
+                <tr><td>2:21</td><td class="boke">ボケ16</td></tr>
+                <tr><td>2:24</td><td class="tsukkomi">ツッコミ12</td></tr>
+                <tr><td>2:33</td><td class="intro">導入３</td></tr>
+                <tr><td>2:38</td><td class="boke">ボケ17</td></tr>
+                <tr><td>2:41</td><td class="tsukkomi">ツッコミ13</td></tr>
+                <tr><td>2:47</td><td class="boke">ボケ18</td></tr>
+                <tr><td>2:48</td><td class="tsukkomi">ツッコミ14</td></tr>
+                <tr><td>2:55</td><td class="boke">ボケ19</td></tr>
+                <tr><td>3:03</td><td class="boke">ボケ20</td></tr>
+                <tr><td>3:08</td><td class="boke">ボケ21</td></tr>
+                <tr><td>3:16</td><td class="tsukkomi">ツッコミ15</td></tr>
+                <tr><td>3:17</td><td class="intro">導入4</td></tr>
+                <tr><td>3:37</td><td class="boke">ボケ22</td></tr>
+                <tr><td>3:53</td><td class="boke">ボケ23（大ボケ）</td></tr>
+                <tr><td>4:10</td><td class="tsukkomi">ツッコミ16</td></tr>
+                <tr><td>4:15</td><td class="boke">ボケ24（オチ）</td></tr>
+                <tr><td>4:19</td><td class="tsukkomi">ツッコミ17</td></tr>
+                <tr><td>4:21</td><td>終了</td></tr>
+            </table>
+            </div>
+        </section>
+        
+        <section class="card">
+            <h2>島田紳助・松本竜助</h2>
+
+            <h4>
+                1976年 結成 <br>
+            </h4>
+
+            <h4>
+                ボケ：島田紳助<br>
+            </h4>
+
+            <h4>
+                ツッコミ：松本竜助<br>
+            </h4>
+
+            <h4>
+                リーゼントにツナギを着た「ツッパリ漫才」で茶の間を席巻した<br>
+                1985年に解散、2006年には竜助が死去。<br>
+                2011年には紳助が自らの不祥事で引退。<br>
+            </h4>
+
+            <h4>
+                もう二度と見れない伝説の漫才師である。<br><br>
+            </h4>
+
+
+            <h3>「キックボクシング」</h3> <h4>お笑いネットワークにて披露</h4>
+
+            <div class="timeline-box">
+                <table>
+                <tr><td>ネタ秒数 5分38秒</td></tr>
+                <tr><td>ボケ数 46個</td></tr>
+                <tr><td>ボケ間隔 7.35秒</td></tr>
+                <tr><td>ツッコミ数 28個</td></tr>
+                <tr><td>ツッコミ間隔 12.1秒</td></tr>
+                </table>
+            
+            <div class="timeline-box">
+                <table>
+                <tr><td>0:00</td><td>スタート</td></tr>
+                <tr><td>0:08</td><td class="boke">ボケ1（つかみ）</td></tr>
+                <tr><td>0:14</td><td class="boke">ボケ2</td></tr>
+                <tr><td>0:15</td><td class="tsukkomi">ツッコミ1</td></tr>
+                <tr><td>0:22</td><td class="intro">導入1</td></tr>
+                <tr><td>0:28</td><td class="tsukkomi">ツッコミ2</td></tr>
+                <tr><td>0:32</td><td class="boke">ボケ3</td></tr>
+                <tr><td>0:35</td><td class="tsukkomi">ツッコミ3</td></tr>
+                <tr><td>0:35</td><td class="boke">ボケ4</td></tr>
+                <tr><td>0:37</td><td class="tsukkomi">ツッコミ4</td></tr>
+                <tr><td>0:38</td><td class="boke">ボケ5</td></tr>
+                <tr><td>0:39</td><td class="tsukkomi">ツッコミ5</td></tr>
+                <tr><td>0:53</td><td class="boke">ボケ6</td></tr>
+                <tr><td>0:55</td><td class="tsukkomi">ツッコミ6</td></tr>
+                <tr><td>0:58</td><td class="boke">ボケ7</td></tr>
+                <tr><td>1:04</td><td class="boke">ボケ8</td></tr>
+                <tr><td>1:08</td><td class="boke">ボケ9</td></tr>
+                <tr><td>1:08</td><td class="tsukkomi">ツッコミ7</td></tr>
+                <tr><td>1:11</td><td class="boke">ボケ10</td></tr>
+                <tr><td>1:12</td><td class="boke">ボケ11</td></tr>
+                <tr><td>1:13</td><td class="boke">ボケ12</td></tr>
+                <tr><td>1:15</td><td class="boke">ボケ13</td></tr>
+                <tr><td>1:17</td><td class="boke">ボケ14</td></tr>
+                <tr><td>1:18</td><td class="boke">ボケ15</td></tr>
+                <tr><td>1:19</td><td class="boke">ボケ16</td></tr>
+                <tr><td>1:20</td><td class="tsukkomi">ツッコミ8</td></tr>
+                <tr><td>1:28</td><td class="boke">ボケ17</td></tr>
+                <tr><td>1:29</td><td class="tsukkomi">ツッコミ9</td></tr>
+                <tr><td>1:32</td><td class="boke">ボケ18</td></tr>
+                <tr><td>1:33</td><td class="boke">ボケ19</td></tr>
+                <tr><td>1:39</td><td class="boke">ボケ20</td></tr>
+                <tr><td>1:40</td><td class="tsukkomi">ツッコミ10</td></tr>
+                <tr><td>1:53</td><td class="boke">ボケ21</td></tr>
+                <tr><td>1:57</td><td class="tsukkomi">ツッコミ11</td></tr>
+                <tr><td>1:58</td><td class="boke">ボケ22</td></tr>
+                <tr><td>1:59</td><td class="tsukkomi">ツッコミ12</td></tr>
+                <tr><td>2:01</td><td class="intro">導入2</td></tr>
+                <tr><td>2:04</td><td class="boke">ボケ23</td></tr>
+                <tr><td>2:18</td><td class="boke">ボケ24</td></tr>
+                <tr><td>2:22</td><td class="tsukkomi">ツッコミ13</td></tr>
+                <tr><td>2:30</td><td class="boke">ボケ25</td></tr>
+                <tr><td>2:30</td><td class="tsukkomi">ツッコミ14</td></tr>
+                <tr><td>2:38</td><td class="intro">導入3</td></tr>
+                <tr><td>2:46</td><td class="boke">ボケ26</td></tr>
+                <tr><td>2:53</td><td class="boke">ボケ27</td></tr>
+                <tr><td>2:57</td><td class="tsukkomi">ツッコミ15</td></tr>
+                <tr><td>3:12</td><td class="boke">ボケ28</td></tr>
+                <tr><td>3:20</td><td class="boke">ボケ29</td></tr>
+                <tr><td>3:21</td><td class="tsukkomi">ツッコミ16</td></tr>
+                <tr><td>3:22</td><td class="boke">ボケ30</td></tr>
+                <tr><td>3:24</td><td class="tsukkomi">ツッコミ17</td></tr>
+                <tr><td>3:26</td><td class="intro">導入4</td></tr>
+                <tr><td>3:30</td><td class="tsukkomi">ツッコミ18</td></tr>
+                <tr><td>3:32</td><td class="boke">ボケ31</td></tr>
+                <tr><td>3:34</td><td class="tsukkomi">ツッコミ19</td></tr>
+                <tr><td>3:40</td><td class="boke">ボケ32</td></tr>
+                <tr><td>3:41</td><td class="tsukkomi">ツッコミ20</td></tr>
+                <tr><td>3:52</td><td class="boke">ボケ33</td></tr>
+                <tr><td>3:58</td><td class="boke">ボケ34</td></tr>
+                <tr><td>3:59</td><td class="tsukkomi">ツッコミ21</td></tr>
+                <tr><td>4:02</td><td class="boke">ボケ35</td></tr>
+                <tr><td>4:03</td><td class="tsukkomi">ツッコミ22</td></tr>
+                <tr><td>4:13</td><td class="boke">ボケ36</td></tr>
+                <tr><td>4:24</td><td class="boke">ボケ37</td></tr>
+                <tr><td>4:35</td><td class="boke">ボケ38</td></tr>
+                <tr><td>4:38</td><td class="tsukkomi">ツッコミ23</td></tr>
+                <tr><td>4:43</td><td class="boke">ボケ39</td></tr>
+                <tr><td>4:55</td><td class="boke">ボケ40</td></tr>
+                <tr><td>4:58</td><td class="tsukkomi">ツッコミ24</td></tr>
+                <tr><td>5:11</td><td class="boke">ボケ41</td></tr>
+                <tr><td>5:17</td><td class="boke">ボケ42</td></tr>
+                <tr><td>5:19</td><td class="tsukkomi">ツッコミ25</td></tr>
+                <tr><td>5:21</td><td class="boke">ボケ43</td></tr>
+                <tr><td>5:22</td><td class="tsukkomi">ツッコミ26</td></tr>
+                <tr><td>5:23</td><td class="intro">導入5</td></tr>
+                <tr><td>5:26</td><td class="boke">ボケ44</td></tr>
+                <tr><td>5:27</td><td class="tsukkomi">ツッコミ27</td></tr>
+                <tr><td>5:29</td><td class="boke">ボケ45（大ボケ）</td></tr>
+                <tr><td>5:36</td><td class="boke">ボケ46（オチ）</td></tr>
+                <tr><td>5:37</td><td class="tsukkomi">ツッコミ28</td></tr>
+                <tr><td>5:38</td><td>終了</td></tr>
+            </table>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>ザ・ぼんち</h2>
+
+            <h4>
+                1972年 結成
+            </h4>
+
+            <h4>
+                ボケ：ぼんち おさむ
+            </h4>
+
+            <h4>
+                ツッコミ：里見まさと
+            </h4>
+
+            <h4>
+                「おさむちゃんで〜す」のギャグで一世を風靡し、<br>
+                漫才ブームを盛り上げた。<br>
+                デビュー曲「恋のぼんちシート」で80万枚売り上げ<br>
+                漫才ブームが収束した1986年に解散。<br>
+                その後長い休止期間を経て2002年に再結成し<br>
+            </h4>
+
+            <h4>
+                1981年、2026年には上方漫才大賞 大賞を受賞した。<br>
+            </h4>
+
+
+            <h3>「卒業式」</h3> <h4>お笑いネットワークにて披露</h4>
+
+            <div class="timeline-box">
+                <table>
+                <tr><td>ネタ秒数 5分23秒</td></tr>
+                <tr><td>ボケ数 19個</td></tr>
+                <tr><td>ボケ間隔 17.0秒</td></tr>
+                <tr><td>ツッコミ数 14個</td></tr>
+                <tr><td>ツッコミ間隔 約23.1秒</td></tr>
+                </table>
+
+            <div class="timeline-box">
+                <table>
+                <tr><td>0:00</td><td>スタート</td></tr>
+                <tr><td>0:15</td><td class="boke">ボケ1（つかみ）</td></tr>
+                <tr><td>0:18</td><td class="intro">導入</td></tr>
+                <tr><td>1:20</td><td class="boke">ボケ2</td></tr>
+                <tr><td>1:24</td><td class="tsukkomi">ツッコミ1</td></tr>
+                <tr><td>1:37</td><td class="boke">ボケ3</td></tr>
+                <tr><td>2:00</td><td class="tsukkomi">ツッコミ2</td></tr>
+                <tr><td>2:02</td><td class="boke">ボケ4</td></tr>
+                <tr><td>2:04</td><td class="tsukkomi">ツッコミ3</td></tr>
+                <tr><td>2:11</td><td class="tsukkomi">ツッコミ4</td></tr>
+                <tr><td>2:12</td><td class="boke">ボケ5</td></tr>
+                <tr><td>0:18</td><td class="intro">導入2</td></tr>
+                <tr><td>2:25</td><td class="boke">ボケ6</td></tr>
+                <tr><td>2:35</td><td class="tsukkomi">ツッコミ5</td></tr>
+                <tr><td>2:37</td><td class="boke">ボケ7</td></tr>
+                <tr><td>2:40</td><td class="tsukkomi">ツッコミ6</td></tr>
+                <tr><td>2:45</td><td class="boke">ボケ8</td></tr>
+                <tr><td>2:53</td><td class="boke">ボケ9</td></tr>
+                <tr><td>3:14</td><td class="boke">ボケ10</td></tr>
+                <tr><td>3:27</td><td class="boke">ボケ11</td></tr>
+                <tr><td>3:35</td><td class="boke">ボケ12</td></tr>
+                <tr><td>3:39</td><td class="tsukkomi">ツッコミ7</td></tr>
+                <tr><td>3:52</td><td class="boke">ボケ13</td></tr>
+                <tr><td>4:10</td><td class="boke">ボケ14</td></tr>
+                <tr><td>4:21</td><td class="tsukkomi">ツッコミ8</td></tr>
+                <tr><td>4:28</td><td class="tsukkomi">ツッコミ9</td></tr>
+                <tr><td>4:29</td><td class="boke">ボケ15</td></tr>
+                <tr><td>4:31</td><td class="tsukkomi">ツッコミ10</td></tr>
+                <tr><td>4:32</td><td class="boke">ボケ16</td></tr>
+                <tr><td>4:34</td><td class="tsukkomi">ツッコミ11</td></tr>
+                <tr><td>4:36</td><td class="boke">ボケ17</td></tr>
+                <tr><td>4:38</td><td class="boke">ボケ18 （大ボケ）</td></tr>
+                <tr><td>5:03</td><td class="tsukkomi">ツッコミ12</td></tr>
+                <tr><td>5:05</td><td class="boke">ボケ19</td></tr>
+                <tr><td>5:06</td><td class="tsukkomi">ツッコミ13</td></tr>
+                <tr><td>5:08</td><td class="boke">ボケ20</td></tr>
+                <tr><td>5:18</td><td class="boke">ボケ19（オチ）</td></tr>
+                <tr><td>5:20</td><td class="tsukkomi">ツッコミ14</td></tr>
+                <tr><td>5:21</td><td>終了</td></tr>
+            </table>
+            </div>
+        </section>
+
+
+    </main>
+    <footer>
+        <p>漫才の構造</p>
+    </footer>
+</body>
+</html>
